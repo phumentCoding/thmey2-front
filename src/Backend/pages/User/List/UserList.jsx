@@ -33,9 +33,9 @@ const UserList = () => {
         <table className="w-full border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-600">
           <thead>
             <tr className="bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300">
+              <th></th>
               <th className="px-4 py-3 border dark:border-gray-600">ID</th>
               <th className="px-4 py-3 border dark:border-gray-600">Name</th>
-              <th className="px-4 py-3 border dark:border-gray-600">Image</th>
               <th className="px-4 py-3 border dark:border-gray-600">Email</th>
               <th className="px-4 py-3 border dark:border-gray-600">Role</th>
               <th className="px-4 py-3 border dark:border-gray-600">Action</th>
@@ -44,15 +44,15 @@ const UserList = () => {
           <tbody>
             {currentUsers.map((user) => (
               <tr key={user.id} className="hover:bg-gray-50 text-gray-800 dark:text-gray-300 dark:hover:bg-gray-700">
-                <td className="px-4 py-3 border text-center dark:border-gray-600">{user.id}</td>
-                <td className="px-4 py-3 border dark:border-gray-600">{user.name}</td>
                 <td className="px-4 py-3 border text-center dark:border-gray-600">
                   <img src={user.image} alt={user.name} className="w-12 h-12 rounded-full object-cover" />
                 </td>
+                <td className="px-4 py-3 border text-center dark:border-gray-600">{user.id}</td>
+                <td className="px-4 py-3 border dark:border-gray-600">{user.name}</td>
                 <td className="px-4 py-3 border dark:border-gray-600">{user.email}</td>
                 <td className="px-4 py-3 border text-center dark:border-gray-600">{user.role}</td>
-                <td className="px-4 py-3 border text-center flex justify-center space-x-2 dark:border-gray-600">
-                  <a href='/admin/user/edit' className="p-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600">
+                <td className="px-4 py-5 border text-center flex justify-center space-x-2 dark:border-gray-600">
+                  <a href='/admin/user/edit' className="p-2 bg-yellow-500 rounded-md hover:bg-yellow-600">
                     <PencilIcon className="h-5 w-5" />
                   </a>
                   <button className="p-2 bg-red-500 text-white rounded-md hover:bg-red-600">

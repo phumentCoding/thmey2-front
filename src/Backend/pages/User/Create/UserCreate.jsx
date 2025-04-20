@@ -5,7 +5,7 @@ const UserCreate = () => {
     <div className="w-full mx-auto p-6 bg-white dark:bg-gray-900 dark:text-white rounded-lg shadow-md">
       <div className=" flex justify-between items-center">
         <h2 className="text-2xl font-semibold mb-4 text-center">Create User</h2>
-        <a href="/admin/user/list" className="text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-500">
+        <a href="/admin/user" className="text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-500">
               Back to User List
         </a>
       </div>
