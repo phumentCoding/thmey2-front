@@ -24,9 +24,9 @@ const TypeList = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 bg-gradient-to-r from-blue-500 via-purple-500 to-red-500">
+    <div className="container mx-auto  from-blue-500 via-purple-500 to-red-500">
       <div className="mb-4 flex items-center justify-between">
-        <h2 className="text-2xl font-semibold text-white">Type List</h2>
+        <h2 className="text-2xl font-semibold">Type List</h2>
         <a href="/admin/type/create" className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
           Add Type
         </a>
@@ -34,7 +34,7 @@ const TypeList = () => {
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-md">
           <thead>
-            <tr className="bg-gray-100">
+            <tr className=" text-gray-700 dark:bg-gray-700 dark:text-gray-300">
               <th className="px-4 py-2 border">ID</th>
               <th className="px-4 py-2 border">Name</th>
               <th className="px-4 py-2 border">Category ID</th>
@@ -45,12 +45,12 @@ const TypeList = () => {
           </thead>
           <tbody>
             {currentTypes.map((type) => (
-              <tr key={type.id} className="hover:bg-gray-50">
-                <td className="px-4 py-2 border text-center">{type.id}</td>
-                <td className="px-4 py-2 border">{type.name}</td>
-                <td className="px-4 py-2 border text-center">{type.category_id}</td>
-                <td className="px-4 py-2 border text-center">{type.user_id}</td>
-                <td className={`px-4 py-2 border text-center ${type.status === 'Active' ? 'text-green-600' : 'text-red-600'}`}>
+              <tr key={type.id} className="hover:bg-gray-50 text-gray-800 dark:text-gray-300 dark:hover:bg-gray-700">
+                <td className="px-4 py-2 border dark:border-gray-600 text-center">{type.id}</td>
+                <td className="px-4 py-2 border dark:border-gray-600">{type.name}</td>
+                <td className="px-4 py-2 border dark:border-gray-600 text-center">{type.category_id}</td>
+                <td className="px-4 py-2 border dark:border-gray-600 text-center">{type.user_id}</td>
+                <td className={`px-4 py-2 border dark:border-gray-600 text-center ${type.status === 'Active' ? 'text-green-600' : 'text-red-600'}`}>
                   {type.status}
                 </td>
                 <td className="px-4 py-2 border text-center">
@@ -79,7 +79,7 @@ const TypeList = () => {
         >
           Prev
         </button>
-        <span className="mx-2 text-lg text-white">{`Page ${currentPage} of ${totalPages}`}</span>
+        <span className="mx-2 text-lg">{`Page ${currentPage} of ${totalPages}`}</span>
         <button
           onClick={() => handlePageChange(currentPage + 1)}
           className="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 disabled:opacity-50"

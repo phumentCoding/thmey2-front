@@ -25,6 +25,7 @@ const EditCategory = () => {
     if (selectedCategory) {
       setCategory(selectedCategory.name || '');
       setStatus(selectedCategory.status || 'active');
+      console.log(selectedCategory.name)
     }
   }, [selectedCategory]);
 
