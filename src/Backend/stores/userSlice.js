@@ -15,6 +15,19 @@ export const fetchUsers = createAsyncThunk(
   }
 );
 
+
+// Async thunk to create users
+export const createUser = createAsyncThunk('user/createUser',async (newUser,thunkAPI) => {
+  try {
+    const response = await user.createUser(newUser);
+    return response.data.user;
+  } catch (error) {
+    // Return a rejected value to be handled in slice
+    return thunkAPI.rejectWithValue(error.response?.data || error.message);
+  }
+})
+
+
 // Slice definition
 const userSlice = createSlice({
   name: 'user',
